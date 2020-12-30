@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome"
+    tools:context=".exam1.form_product">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:padding="8dp"
+                app:cardCornerRadius="13dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="126dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:width="20dp"
+                    android:editable="true"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="Producto"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    tools:text="Producto" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <ImageView
+                android:id="@+id/img_product"
+                android:layout_width="441dp"
+                android:layout_height="312dp"
+                android:layout_alignTop="@id/textView4"
+                android:layout_marginTop="31dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:cropToPadding="true"
+                tools:ignore="NotSibling"
+                tools:src="?attr/selectableItemBackground" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="377dp"
+                android:layout_height="419dp"
+                android:layout_alignTop="@id/btn_image"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="57dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:padding="8dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="16dp"
+                app:cardMaxElevation="5dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginRight="7dp"
+                        android:focusable="auto"
+                        android:hint="Descripción"
+                        app:errorEnabled="true"
+                        app:errorTextColor="#AA0101"
+                        app:hintAnimationEnabled="true"
+                        app:hintEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txt_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:editable="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginRight="7dp"
+                        android:focusable="auto"
+                        android:hint="Stock"
+                        app:errorEnabled="true"
+                        app:hintAnimationEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txt_stock"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:editable="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginRight="7dp"
+                        android:focusable="auto"
+                        android:hint="Peso"
+                        app:errorEnabled="true"
+                        app:hintAnimationEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txt_weight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:editable="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="312dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Escoger categoria" />
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:visibility="gone"/>
+
+                    <include
+                        android:id="@+id/spinner_custom"
+                        layout="@layout/spinner_custom"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginBottom="5dp"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/btn_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#1A81AA"
+                        android:fontFamily="@font/delius_unicase"
+                        android:text="Registrar"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/cardView"
+                android:layout_alignTop="@id/img_product"
+                android:layout_marginLeft="341dp"
+                android:layout_marginTop="200dp"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_menu_gallery" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/llProgressBar"
+        layout="@layout/progress_bar_title"
+        android:visibility="gone"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
